@@ -66,15 +66,16 @@ public class ExtentReportListener implements IReporter {
 	                    test.addScreenCaptureFromPath("C:\\Users\\91938\\eclipse-workspace\\POMTesting\\Screenshots\\"+result.getName()+".png");
 	                }
 
-	                test.log(status, message);
-	                
+	                test.log(status, message); 
 	            }
 	        }
 	    }
+	    
 
 	private Date getTime(long millis) {
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTimeInMillis(millis);
 		return calendar.getTime();
 	}
+	
 }

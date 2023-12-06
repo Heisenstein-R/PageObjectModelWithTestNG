@@ -15,7 +15,7 @@ import org.testng.ITestResult;
 
 import com.qa.base.TestBase;
 
-public class MyListener extends TestBase implements WebDriverListener, ITestListener{
+public class MyListener extends TestBase implements ITestListener, WebDriverListener{
 
 	
 	
