@@ -1,9 +1,3 @@
-//Raj Heisenstein
-
-
-
-
-
 package com.qa.pages;
 
 import org.openqa.selenium.WebElement;
