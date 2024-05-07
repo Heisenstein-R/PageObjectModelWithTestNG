@@ -65,7 +65,7 @@ public class ExtentReportListener implements IReporter {
 	                    message += " with exception: " + result.getThrowable();
 	                    test.addScreenCaptureFromPath("C:\\Users\\91938\\eclipse-workspace\\POMTesting\\Screenshots\\"+result.getName()+".png");
 	                }
-
+	                
 	                test.log(status, message); 
 	            }
 	        }

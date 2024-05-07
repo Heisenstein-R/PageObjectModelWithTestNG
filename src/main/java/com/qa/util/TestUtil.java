@@ -23,7 +23,7 @@ public class TestUtil extends TestBase {
 	public static FileInputStream file = null;
 	public static XSSFWorkbook workbook = null;
 
-	public static  Object[][] getTestData(String sheetName) {
+	public static Object[][] getTestData(String sheetName) {
 
 		try {
 			file = new FileInputStream(TEST_DATA_FILE_PATH);
@@ -39,24 +39,20 @@ public class TestUtil extends TestBase {
 		}
 
 		XSSFSheet sheet = workbook.getSheet(sheetName);
-
 		Object[][] data = new Object[sheet.getLastRowNum()][sheet.getRow(0).getLastCellNum()];
 		for (int i = 0; i < sheet.getLastRowNum(); i++) {
 			for (int j = 0; j < sheet.getRow(0).getLastCellNum(); j++) {
-
 				data[i][j] = sheet.getRow(i + 1).getCell(j).toString();
 			}
 		}
-
 		return data;
 	}
-	
-	
+
 	public static void TakeScreenShotWhenFailed(String MethodName) throws IOException {
-		File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		String userDirectory = System.getProperty("user.dir");
 //		FileHandler.copy(srcFile, new File(userDirectory + "\\Screenshots\\" + MethodName+"_" +System.currentTimeMillis()+ ".png"));
-		FileHandler.copy(srcFile, new File(userDirectory + "\\Screenshots\\" + MethodName+ ".png"));
+		FileHandler.copy(srcFile, new File(userDirectory + "\\Screenshots\\" + MethodName + ".png"));
 	}
 
 }

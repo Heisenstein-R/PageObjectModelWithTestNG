@@ -32,7 +32,7 @@ public class TestBase {
 
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream(
-					"C:\\Users\\91938\\eclipse-workspace\\POMTesting\\src\\main\\java\\com\\qa\\config\\Config.propertiees");
+					"C:\\Users\\91938\\eclipse-workspace\\POMTesting\\src\\main\\java\\com\\qa\\config\\Config.properties");
 			prop.load(ip);
 
 		} catch (FileNotFoundException e) {

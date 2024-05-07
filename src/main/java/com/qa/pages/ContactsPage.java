@@ -77,14 +77,13 @@ public class ContactsPage extends TestBase {
 //			System.out.println(countrieslist.get(i));
 //			System.out.println("    ========>    " + country);
 			if (country.equalsIgnoreCase(Country)) {
-				
 				countrieslist.get(i).click();
 				break;
 			}
 		}
 		
 		driver.findElement(By.xpath("//button[text() = 'Save']")).click();
-		driver.findElement(By.xpath("//div//span[text() = '"+firstname+" "+lastname+"']")).isDisplayed();
+		driver.findElement(By.xpath("//div//span[text() = '" + firstname + " " + lastname + "']")).isDisplayed();
 	}
 
 }
